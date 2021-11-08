@@ -14,7 +14,7 @@ A **xim-id** looks something like this:
 xi-556PVvNyq3m
 ```
 
-## Usage
+## Usage №1
 To use the program `xim-id`, run it as following:
 ```
 xim-id
@@ -23,6 +23,13 @@ xim-id
 This will output a **xim-id**, such as:
 ```
 xi-557ksIsNSRm
+```
+… with a trailing new-line at the end.
+
+## Usage №2
+To do almost exactly the same as that, but with no trailing new-line line, use th program `xim-id` as follows:
+```
+xim-id -n
 ```
 
 ## xim-id
