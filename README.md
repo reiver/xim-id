@@ -16,7 +16,7 @@ xi-556PVvNyq3m
 
 ## Usage
 To use the program `xim-id`, run it as following:
-``
+```
 xim-id
 ```
 
@@ -28,4 +28,5 @@ xi-557ksIsNSRm
 ## xim-id
 
 For more information on **xim-ids** see:
-https://github.com/reiver/go-xim
+
+* https://github.com/reiver/go-xim
