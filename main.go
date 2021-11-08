@@ -29,17 +29,6 @@ func main() {
 	}
 }
 
-func generate() {
-	var id xim.ID = xim.Generate()
-
-	switch {
-	case arg.NoNewline:
-		fmt.Print(id)
-	default:
-		fmt.Println(id)
-	}
-}
-
 func decompile() {
 	if len(arg.Values) < 2 {
 		badrequest("missing xim-id")
