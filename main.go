@@ -23,7 +23,9 @@ func main() {
 		generate()
 	default:
 		fmt.Fprintf(os.Stderr, "error: unknown command — %q\n", command)
-		os.Exit(1)
+
+		const commandLineUsageError = 64
+		os.Exit(commandLineUsageError)
 	}
 }
 
