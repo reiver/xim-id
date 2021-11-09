@@ -33,7 +33,7 @@ func decompile() {
 
 			unixtimestamp, successful = id.UnixTime()
 			if !successful {
-				internalerror("internal software error: was not able to decompile unix timestamp")
+				internalerror("was not able to decompile unix timestamp")
 				return
 			}
 		}
@@ -49,7 +49,7 @@ func decompile() {
 
 			chaos, successful = id.Chaos()
 			if !successful {
-				internalerror("internal software error: was not able to decompile chaos")
+				internalerror("was not able to decompile chaos")
 				return
 			}
 		}

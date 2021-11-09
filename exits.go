@@ -14,7 +14,7 @@ func badrequest(format string, a ...interface{}) {
 }
 
 func internalerror(format string, a ...interface{}) {
-	var s string = fmt.Sprintf(format, a...)
+	var s string = fmt.Sprintf("internal software error: "+format, a...)
 	fmt.Fprintln(os.Stderr, s)
 
 	const commandLineInternalSoftwareError = 70
