@@ -33,7 +33,19 @@ xim-id -n
 ```
 
 ## Usage №3
-To take a **xim-id** (such as `xi-557ksIsNSRm`) and decompile it into its timestamp and its chaos, run the program `xim-id` as follows:
+To do almost exactly the same as _usage №1_, but where one specifies the time using unix-time, use the program `xim-id` as follows:
+```
+xim-id --unixtime=189368700
+```
+
+## Usage №4
+And again, to do almost exactly the same as _usage №3_, but with no trailing new-line line, use the program `xim-id` as follows:
+```
+xim-id -n --unixtime=189368700
+```
+
+## Usage №5
+To take a **xim-id** (such as `xi-557ksIsNSRm`) and decompile it into its unix-time timestamp and its chaos, run the program `xim-id` as follows:
 ```
 xim-id decompile xi-557ksIsNSRm
 ```
