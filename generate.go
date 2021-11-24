@@ -11,7 +11,7 @@ import (
 
 func generate() {
 
-	var id xim.ID
+	var ids []xim.ID
 	{
 		switch {
 		case optint32.Nothing() != arg.UnixTime:
@@ -21,16 +21,28 @@ func generate() {
 				return
 			}
 
-			id = xim.GenerateForUnixTime(unixtimestamp)
+			var id xim.ID = xim.GenerateForUnixTime(unixtimestamp)
+
+			ids = append(ids, id)
 		default:
-			id = xim.Generate()
+			for i:=uint64(0); i<arg.Count; i++ {
+				var id xim.ID = xim.Generate()
+				ids = append(ids, id)
+			}
 		}
 	}
 
 	switch {
 	case arg.NoNewline:
-		fmt.Print(id)
+		for i, id := range ids {
+			if 0 < i {
+				fmt.Print(" ")
+			}
+			fmt.Print(id)
+		}
 	default:
-		fmt.Println(id)
+		for _, id := range ids {
+			fmt.Println(id)
+		}
 	}
 }
