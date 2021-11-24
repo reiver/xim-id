@@ -7,6 +7,7 @@ import (
 	"github.com/reiver/go-xim"
 
 	"fmt"
+	"sort"
 )
 
 func generate() {
@@ -30,6 +31,17 @@ func generate() {
 				ids = append(ids, id)
 			}
 		}
+	}
+
+	{
+		var fn func(i int, j int)bool = func(i int, j int) bool {
+			return ids[i].String() < ids[j].String()
+		}
+
+		sort.Slice(
+			ids,
+			fn,
+		)
 	}
 
 	switch {
